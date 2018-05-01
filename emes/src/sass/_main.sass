@@ -1,0 +1,34 @@
+
+
+body
+    position: relative
+    font-family: $r
+    overflow: hidden
+.page_wrapper
+    width: calc(100% - 300px)
+    margin-left: auto
+    padding: 20px
+    +rmin(1200)
+        opacity: 0
+        overflow: hidden
+section.main_page_banner
+    width: 100%
+    height: 100vh
+    position: relative
+    .image
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 0
+        opacity: 0
+    &:before
+        @include pseudo
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        z-index: 1
+        background: rgba(0,0,0,0.1)
+            
